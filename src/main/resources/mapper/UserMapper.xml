@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hobbit.modules.welcome.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.hobbit.modules.welcome.entity.User">
+<mapper namespace="com.hobbit.modules.web.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.hobbit.modules.web.entity.User">
     <result column="id" jdbcType="INTEGER" property="id" />
     <result column="account" jdbcType="VARCHAR" property="account" />
     <result column="birthday" jdbcType="VARCHAR" property="birthday" />
@@ -36,7 +36,7 @@
     <result column="maintain_flag" jdbcType="INTEGER" property="maintainFlag" />
     <result column="ver" jdbcType="INTEGER" property="ver" />
   </resultMap>
-  <insert id="insert" parameterType="com.hobbit.modules.welcome.entity.User">
+  <insert id="insert" parameterType="com.hobbit.modules.web.entity.User">
     insert into user (id, account, birthday, 
       create_time, email, firstlogin, 
       head_img, installapp, last_time, 
@@ -62,7 +62,7 @@
       #{payPwd,jdbcType=VARCHAR}, #{maintainFlag,jdbcType=INTEGER}, #{ver,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.hobbit.modules.welcome.entity.User">
+  <insert id="insertSelective" parameterType="com.hobbit.modules.web.entity.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -267,7 +267,7 @@
       </if>
     </trim>
   </insert>
-  <resultMap id="BaseResultMap" type="com.hobbit.modules.welcome.entity.User">
+  <resultMap id="BaseResultMap" type="com.hobbit.modules.web.entity.User">
     <result column="Host" jdbcType="CHAR" property="host" />
     <result column="User" jdbcType="CHAR" property="user" />
     <result column="Password" jdbcType="CHAR" property="password" />
@@ -308,7 +308,7 @@
     <result column="plugin" jdbcType="CHAR" property="plugin" />
     <result column="password_expired" jdbcType="CHAR" property="passwordExpired" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hobbit.modules.web.entity.UserWithBLOBs">
     <result column="ssl_cipher" jdbcType="LONGVARBINARY" property="sslCipher" />
     <result column="x509_issuer" jdbcType="LONGVARBINARY" property="x509Issuer" />
     <result column="x509_subject" jdbcType="LONGVARBINARY" property="x509Subject" />
@@ -317,7 +317,7 @@
   <sql id="Blob_Column_List">
     ssl_cipher, x509_issuer, x509_subject, authentication_string
   </sql>
-  <insert id="insert" parameterType="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <insert id="insert" parameterType="com.hobbit.modules.web.entity.UserWithBLOBs">
     insert into user (Host, User, Password, 
       Select_priv, Insert_priv, Update_priv, 
       Delete_priv, Create_priv, Drop_priv, 
@@ -349,7 +349,7 @@
       #{sslCipher,jdbcType=LONGVARBINARY}, #{x509Issuer,jdbcType=LONGVARBINARY}, #{x509Subject,jdbcType=LONGVARBINARY}, 
       #{authenticationString,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <insert id="insertSelective" parameterType="com.hobbit.modules.web.entity.UserWithBLOBs">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="host != null">
@@ -614,7 +614,7 @@
       </if>
     </trim>
   </insert>
-  <resultMap id="BaseResultMap" type="com.hobbit.modules.welcome.entity.User">
+  <resultMap id="BaseResultMap" type="com.hobbit.modules.web.entity.User">
     <result column="id" jdbcType="INTEGER" property="id" />
     <result column="account" jdbcType="VARCHAR" property="account" />
     <result column="birthday" jdbcType="VARCHAR" property="birthday" />
@@ -649,7 +649,7 @@
     <result column="maintain_flag" jdbcType="INTEGER" property="maintainFlag" />
     <result column="ver" jdbcType="INTEGER" property="ver" />
   </resultMap>
-  <insert id="insert" parameterType="com.hobbit.modules.welcome.entity.User">
+  <insert id="insert" parameterType="com.hobbit.modules.web.entity.User">
     insert into user (id, account, birthday, 
       create_time, email, firstlogin, 
       head_img, installapp, last_time, 
@@ -675,7 +675,7 @@
       #{payPwd,jdbcType=VARCHAR}, #{maintainFlag,jdbcType=INTEGER}, #{ver,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.hobbit.modules.welcome.entity.User">
+  <insert id="insertSelective" parameterType="com.hobbit.modules.web.entity.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -880,7 +880,7 @@
       </if>
     </trim>
   </insert>
-  <resultMap id="BaseResultMap" type="com.hobbit.modules.welcome.entity.User">
+  <resultMap id="BaseResultMap" type="com.hobbit.modules.web.entity.User">
     <result column="Host" jdbcType="CHAR" property="host" />
     <result column="User" jdbcType="CHAR" property="user" />
     <result column="Password" jdbcType="CHAR" property="password" />
@@ -921,7 +921,7 @@
     <result column="plugin" jdbcType="CHAR" property="plugin" />
     <result column="password_expired" jdbcType="CHAR" property="passwordExpired" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.hobbit.modules.web.entity.UserWithBLOBs">
     <result column="ssl_cipher" jdbcType="LONGVARBINARY" property="sslCipher" />
     <result column="x509_issuer" jdbcType="LONGVARBINARY" property="x509Issuer" />
     <result column="x509_subject" jdbcType="LONGVARBINARY" property="x509Subject" />
@@ -930,7 +930,7 @@
   <sql id="Blob_Column_List">
     ssl_cipher, x509_issuer, x509_subject, authentication_string
   </sql>
-  <insert id="insert" parameterType="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <insert id="insert" parameterType="com.hobbit.modules.web.entity.UserWithBLOBs">
     insert into user (Host, User, Password, 
       Select_priv, Insert_priv, Update_priv, 
       Delete_priv, Create_priv, Drop_priv, 
@@ -962,7 +962,7 @@
       #{sslCipher,jdbcType=LONGVARBINARY}, #{x509Issuer,jdbcType=LONGVARBINARY}, #{x509Subject,jdbcType=LONGVARBINARY}, 
       #{authenticationString,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hobbit.modules.welcome.entity.UserWithBLOBs">
+  <insert id="insertSelective" parameterType="com.hobbit.modules.web.entity.UserWithBLOBs">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="host != null">

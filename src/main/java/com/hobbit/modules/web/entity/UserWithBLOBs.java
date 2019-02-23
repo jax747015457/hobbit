@@ -1,4 +1,4 @@
-package com.hobbit.modules.welcome.entity;
+package com.hobbit.modules.web.entity;
 
 public class UserWithBLOBs extends User {
     private byte[] sslCipher;

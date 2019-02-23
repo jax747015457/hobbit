@@ -1,6 +1,6 @@
-package com.hobbit.modules.welcome.dao;
+package com.hobbit.modules.web.dao;
 
-import com.hobbit.modules.welcome.entity.User;
+import com.hobbit.modules.web.entity.User;
 
 public interface UserMapper {
     int insert(User record);

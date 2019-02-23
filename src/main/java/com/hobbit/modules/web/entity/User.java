@@ -1,4 +1,4 @@
-package com.hobbit.modules.welcome.entity;
+package com.hobbit.modules.web.entity;
 
 public class User {
     private Integer id;

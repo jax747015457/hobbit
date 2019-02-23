@@ -1,6 +1,5 @@
-package com.hobbit.modules.welcome.controller;
+package com.hobbit.modules.web.controller;
 
-import com.sun.nio.sctp.MessageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
